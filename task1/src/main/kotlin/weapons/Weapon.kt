@@ -18,6 +18,14 @@ abstract class Steelarm: Weapon()
 class Axe : Steelarm() {
     override val cost: Long
         get() = 10
+
+    lateinit var string: String
+    fun func(a: Int, b: Int, str: String): Int {
+        string = str
+        println(string)
+        return a + b
+    }
+
 }
 class Knife : Steelarm() {
     override val cost: Long

@@ -2,7 +2,6 @@ package military_unit
 
 import weapons.*
 
-class MilitaryUnit(weapons: Iterable<Weapon>) {
-    private val weapons = weapons.toList()
+class MilitaryUnit(private val weapons: List<Weapon>) {
     val cost get() = weapons.sumOf { weapon -> weapon.cost }
 }
