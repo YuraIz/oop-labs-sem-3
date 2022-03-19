@@ -1,3 +1,5 @@
+package sudoku
+
 class SudokuTable() {
     private var table = arrayOf<Array<Char>>()
 
