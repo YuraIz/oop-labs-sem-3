@@ -4,14 +4,14 @@ import weapons.WeaponType
 
 fun main() {
 
-    val testUnit = MilitaryUnitBuilder.build(mapOf(
+    val testUnit = MilitaryUnitBuilder.build(
         WeaponType.SWORD to 10,
         WeaponType.AXE to 20,
         WeaponType.MACHINEGUN to 8,
         WeaponType.AUTOMAT to 15
-    ))
+    )
 
-    var axe = Axe()
+    val axe = Axe()
 
     val num = axe.func(4, 5, "Hello")
     println(num)

@@ -5,12 +5,12 @@ import weapons.WeaponFactory
 import weapons.WeaponType
 
 object MilitaryUnitBuilder {
-    fun build(weaponsOrder: Map<WeaponType, Long>): MilitaryUnit {
+    fun build(vararg weaponsOrder: Pair<WeaponType, Long>): MilitaryUnit {
         val weapons = ArrayList<Weapon>()
-        for(entry in weaponsOrder.entries){
-            for (i in 1..entry.value){
+        for((key, value) in weaponsOrder){
+            for (i in 1..value){
                 weapons.add(
-                    WeaponFactory.createInstance(entry.key)
+                    WeaponFactory.createInstance(key)
                 )
             }
         }
